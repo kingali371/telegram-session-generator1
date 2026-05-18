@@ -1,12 +1,18 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 WORKDIR /app
 
+# نسخ ملف المتطلبات أولاً للاستفادة من التخزين المؤقت
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
+# تثبيت المتطلبات مع تجنب تثبيت pydantic-core من المصدر
+RUN pip install --no-cache-dir --no-binary pydantic-core pydantic
+
+# نسخ باقي ملفات المشروع
 COPY . .
 
-EXPOSE 8000
+# المنفذ الذي سيستخدمه Render
+ENV PORT=8000
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# أمر تشغيل التطبيق
+CMD uvicorn main:app --host 0.0.0.0 --port $PORT
