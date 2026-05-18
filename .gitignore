@@ -1,8 +1,33 @@
-
-**4. ملف `.gitignore`**
+# ملفات الجلسة
 *.session
-*.pyc
-pycache/
+*.session-journal
+session.txt
+
+# متغيرات البيئة
 .env
+.env.dev
+.env.prod
+
+# ملفات Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# بيئات افتراضية
 venv/
 env/
+ENV/
+env.bak/
+venv.bak/
+
+# محررات النصوص
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ملفات نظام التشغيل
+.DS_Store
+Thumbs.db
