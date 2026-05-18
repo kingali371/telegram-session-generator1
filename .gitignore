@@ -1,33 +1,8 @@
-# ملفات الجلسة
-*.session
-*.session-journal
-session.txt
-
-# متغيرات البيئة
 .env
-.env.dev
-.env.prod
-
-# ملفات Python
+*.session
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-
-# بيئات افتراضية
+*.pyc
 venv/
 env/
-ENV/
-env.bak/
-venv.bak/
-
-# محررات النصوص
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# ملفات نظام التشغيل
 .DS_Store
-Thumbs.db
+*.log
