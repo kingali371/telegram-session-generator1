@@ -1,0 +1,8 @@
+
+**4. ملف `.gitignore`**
+*.session
+*.pyc
+pycache/
+.env
+venv/
+env/
