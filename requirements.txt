@@ -1,2 +1,4 @@
-pyrogram>=2.0.0
-tgcrypto>=1.2.3
+pyrogram
+tgcrypto
+fastapi
+uvicorn
