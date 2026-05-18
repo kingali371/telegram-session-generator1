@@ -9,3 +9,7 @@
 ## التثبيت
 ```bash
 pip install -r requirements.txt
+
+التشغيل
+
+python generate_session.py
